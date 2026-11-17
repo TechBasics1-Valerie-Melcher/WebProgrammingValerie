@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOKZ</title>
+    <style>
+        @font-face {
+            font-family: "Climate Crisis";
+            src: url("fonts/ClimateCrisis.ttf");
+
+        }
+        @font-face {
+            font-family: "Space Grotesk";
+            src: url("fonts/SpaceGrotesk.ttf");
+        
+        }
+        body{
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #22333b;
+            color: #fefae0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-family: "Climate Crisis", sans-serif;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        h1::before,
+        h1::after {
+            content: "";
+            width: 6rem;
+            height: 1.5rem;
+            background: repeating-conic-gradient(#22333b 0% 25%, #fefae0 0% 50%) 0 0 / 1rem 1rem;
+        }
+
+        h1::before {
+            transform: scaleX(-1);
+        }
+
+        header, footer {
+            background-color: #fefae0;
+            color: #22333b;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header {
+            position: relative;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+            max-width: 40rem;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+
+        }
+
+        nav{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 1.5rem;
+        }
+
+        summary {
+            cursor: pointer;
+            position: relative;
+            z-index: 6;
+           
+        }
+
+        details[open] summary {
+            color: #fefae0;
+        }
+
+        nav ul {
+            position: absolute;
+            top: -0.75rem;
+            left: -1.5rem;
+            width: 14rem;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 3rem 1.5rem 1.5rem;
+            list-style: none;
+            background-color: #ffa69e;
+            text-align: left;
+            z-index: 5;
+            box-shadow: 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.25);
+            transform: rotate(-1.5deg);
+        }
+
+        nav ul::before {
+            content: "ORDER";
+            display: block;
+            margin-bottom: 0.75rem;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #fefae0;
+        }
+
+        details {
+            position: relative;
+        }
+
+        details[open]::after {
+            content: "";
+            position: absolute;
+            top: -1.5rem;
+            left: 10.5rem;
+            width: 4rem;
+            height: 1.5rem;
+            background-color: rgba(255,238,170, 0.8);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+            transform: rotate(40deg);
+            z-index: 7;
+            pointer-events: none;
+        }
+
+        nav li{
+            margin: 0;
+            padding: 0.4rem 0.75rem;
+            background-color: #f28b82;
+            border-left: 2px solid #22333b;
+            border-bottom: 1px solid #22333b;
+        }
+
+        nav a{
+            color: #fefae0;
+            text-decoration: none;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.25rem;
+
+        }
+
+        @media (max-width: 40rem) {
+            h1::before,
+            h1::after {
+                width: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <details>
+                <summary>Menu</summary>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Mains</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">About</a></li>   
+            </ul>
+            </details>
+           
+        </nav>
+        <h1>COOKZ</h1>
+        <p>make it delicious</p>
+        
+    
+    </header>
+
+    <main> 
+
+
+    <section>
+        <h2>THE IDEA</h2>
+        <p>The website is supposed to be a blog page where I can share all my favorite recipes for cooking as well as baking.</p>
+
+    </section>
+    
+    <section>
+        <h2>HOW IT WILL WORK</h2>
+        <ol>
+            <li>There is a Home page with some highlight recipes</li>
+            <li>Then there is a section for cooking recipes</li>
+            <li>A dessert section exists as well</li>
+            <li>I also want to add a small "About" Section, where I will introduce myself a bit</li>
+        </ol>
+
+    </section>
+    </main>
+    <footer><p>Enjoy!</p></footer>
+</body>
+</html>
